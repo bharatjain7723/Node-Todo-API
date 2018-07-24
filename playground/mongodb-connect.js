@@ -14,8 +14,8 @@ MongoClient.connect('mongodb://localhost:27017',{ useNewUrlParser: true }, (err,
 
     const db = client.db(dbName);
     db.collection('Todos').insertOne({
-        text: 'something to do',
-        completed: false
+        text: 'something to do2',
+        completed: true
     }, (err, result) =>{
         if(err){
             return console.log("Unable to insert todo", err);          
@@ -24,7 +24,7 @@ MongoClient.connect('mongodb://localhost:27017',{ useNewUrlParser: true }, (err,
     });
 
     db.collection('Users').insertOne({
-        name: 'Bharat',
+        name: 'Bhaskar',
         age: 22,
         location: 'Delhi' 
     }, (err, result)=>{
